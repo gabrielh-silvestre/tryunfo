@@ -19,93 +19,99 @@ export default class Form extends Component {
     } = this.props;
 
     return (
-      <form>
-        <label htmlFor="name">
-          Nome da carta:
+      <form className="border-red-500 border-solid border-2 flex flex-col mx-8 py-4 items-center">
+        <label className="flex flex-col w-2/3 mb-4" htmlFor="name">
+          Nome
           <input
             type="text"
             name="name"
             id="name"
-            value={ cardName }
-            onChange={ onInputChange }
+            value={cardName}
+            onChange={onInputChange}
+            className="rounded mt-1"
             data-testid="name-input"
           />
         </label>
 
-        <label htmlFor="description">
-          Descrição:
+        <label className="flex flex-col w-2/3 mb-4" htmlFor="description">
+          Descrição
           <textarea
             name="description"
             id="description"
             cols="30"
-            rows="10"
-            value={ cardDescription }
-            onChange={ onInputChange }
+            value={cardDescription}
+            onChange={onInputChange}
+            className="rounded mt-1"
             data-testid="description-input"
           />
         </label>
 
-        <label htmlFor="attr1">
-          Atributo 1:
+        <label className="flex flex-col w-2/3 mb-4" htmlFor="attr1">
+          Energia amaldiçoada
           <input
             type="number"
             name="attr1"
             id="attr1"
             min="0"
             max="90"
-            value={ cardAttr1 }
-            onChange={ onInputChange }
+            value={cardAttr1}
+            onChange={onInputChange}
+            className="rounded mt-1"
             data-testid="attr1-input"
           />
         </label>
 
-        <label htmlFor="attr2">
-          Atributo 2:
+        <label className="flex flex-col w-2/3 mb-4" htmlFor="attr2">
+          Combate corpo a corpo
           <input
             type="number"
             name="attr2"
             id="attr2"
             min="0"
             max="90"
-            value={ cardAttr2 }
-            onChange={ onInputChange }
+            value={cardAttr2}
+            onChange={onInputChange}
+            className="rounded mt-1"
             data-testid="attr2-input"
           />
         </label>
 
-        <label htmlFor="attr3">
-          Atributo 3:
+        <label className="flex flex-col w-2/3 mb-4" htmlFor="attr3">
+          Força do pacto
           <input
             type="number"
             name="attr3"
             id="attr3"
             min="0"
             max="90"
-            value={ cardAttr3 }
-            onChange={ onInputChange }
+            value={cardAttr3}
+            onChange={onInputChange}
+            className="rounded mt-1"
             data-testid="attr3-input"
           />
         </label>
 
-        <label htmlFor="image">
-          Imagem (URL):
+        <label className="flex flex-col w-2/3 mb-4" htmlFor="image">
+          Imagem (URL)
           <input
             type="text"
             name="image"
             id="image"
-            value={ cardImage }
-            onChange={ onInputChange }
+            value={cardImage}
+            onChange={onInputChange}
+            className="rounded mt-1"
             data-testid="image-input"
           />
         </label>
 
-        <label htmlFor="rarity">
-          Raridade:
+        <label className="flex flex-col w-2/3 mb-4" htmlFor="rarity">
+          Raridade
           <select
             name="rarity"
             id="rarity"
-            value={ cardRare }
-            onChange={ onInputChange }
+            value={cardRare}
+            onChange={onInputChange}
+            className="rounded mt-1"
             data-testid="rare-input"
           >
             <option value="normal">normal</option>
@@ -117,14 +123,15 @@ export default class Form extends Component {
         {hasTrunfo ? (
           <p>Você já tem um Super Trunfo em seu baralho</p>
         ) : (
-          <label htmlFor="trunfo">
+          <label className="flex flex-col w-2/3 mb-4" htmlFor="trunfo">
             É super trunfo?
             <input
               type="checkbox"
               name="trunfo"
               id="trunfo"
-              checked={ cardTrunfo }
-              onChange={ onInputChange }
+              checked={cardTrunfo}
+              onChange={onInputChange}
+              className="rounded mt-1"
               data-testid="trunfo-input"
             />
           </label>
@@ -132,9 +139,9 @@ export default class Form extends Component {
 
         <button
           type="submit"
-          disabled={ isSaveButtonDisabled }
+          disabled={isSaveButtonDisabled}
           data-testid="save-button"
-          onClick={ onSaveButtonClick }
+          onClick={onSaveButtonClick}
         >
           Salvar
         </button>
