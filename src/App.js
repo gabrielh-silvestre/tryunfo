@@ -50,7 +50,7 @@ class App extends React.Component {
       () => {
         this.resetForm();
         this.setState({ hasTrunfo: this.validTrunfo() });
-      },
+      }
     );
   };
 
@@ -64,7 +64,7 @@ class App extends React.Component {
       },
       () => {
         this.setState({ hasTrunfo: this.validTrunfo() });
-      },
+      }
     );
   };
 
@@ -75,9 +75,9 @@ class App extends React.Component {
 
     this.setState({
       hasError:
-        this.validRange(attributes)
-        || this.validSum(attributes)
-        || this.validTextInputs(allStates),
+        this.validRange(attributes) ||
+        this.validSum(attributes) ||
+        this.validTextInputs(allStates),
     });
   };
 
@@ -103,8 +103,8 @@ class App extends React.Component {
     const maxSum = 210;
 
     return (
-      arr.map((item) => parseInt(item, 10)).reduce((acc, curr) => acc + curr)
-      > maxSum
+      arr.map((item) => parseInt(item, 10)).reduce((acc, curr) => acc + curr) >
+      maxSum
     );
   };
 
@@ -127,34 +127,37 @@ class App extends React.Component {
     });
   };
 
-  renderCardList = (list, isPreview) => list.map((card) => (
-    <Card
-      key={ card.name }
-      isPreview={ isPreview }
-      deleteCard={ this.handleClick }
-      cardName={ card.name }
-      cardDescription={ card.description }
-      cardAttr1={ card.attr1 }
-      cardAttr2={ card.attr2 }
-      cardAttr3={ card.attr3 }
-      cardImage={ card.image }
-      cardRare={ card.rarity }
-      cardTrunfo={ card.trunfo }
-    />
-  ));
+  renderCardList = (list, isPreview) =>
+    list.map((card) => (
+      <Card
+        key={card.name}
+        isPreview={isPreview}
+        deleteCard={this.handleClick}
+        cardName={card.name}
+        cardDescription={card.description}
+        cardAttr1={card.attr1}
+        cardAttr2={card.attr2}
+        cardAttr3={card.attr3}
+        cardImage={card.image}
+        cardRare={card.rarity}
+        cardTrunfo={card.trunfo}
+      />
+    ));
 
   renderFiltered = () => {
     const { cardList, textFilter, selectFilter, checkFilter } = this.state;
 
     if (checkFilter) {
       return this.renderCardList(
-        cardList.filter(({ trunfo }) => trunfo === checkFilter), false,
+        cardList.filter(({ trunfo }) => trunfo === checkFilter),
+        false
       );
     }
 
     if (textFilter && textFilter !== '' && selectFilter !== 'todas') {
       const filteredList = cardList.filter(
-        ({ name, rarity }) => name.includes(textFilter) && rarity === selectFilter,
+        ({ name, rarity }) =>
+          name.includes(textFilter) && rarity === selectFilter
       );
 
       return this.renderCardList(filteredList, false);
@@ -162,13 +165,14 @@ class App extends React.Component {
 
     if (textFilter && textFilter !== '') {
       return this.renderCardList(
-        cardList.filter(({ name }) => name.includes(textFilter)), false,
+        cardList.filter(({ name }) => name.includes(textFilter)),
+        false
       );
     }
 
     if (selectFilter !== 'todas') {
       const filteredList = cardList.filter(
-        ({ rarity }) => rarity === selectFilter,
+        ({ rarity }) => rarity === selectFilter
       );
 
       return this.renderCardList(filteredList, false);
@@ -196,31 +200,31 @@ class App extends React.Component {
     const allStates = this.state;
 
     return (
-      <main>
-        <article>
-          <h1>Tryunfo</h1>
+      <main className="bg-gray-800 text-gray-200">
+        <h1 className="text-3xl text-center py-4 mb-8">Tryunfo</h1>
+        <article className="grid grid-cols-2">
           <Form
-            cardName={ name }
-            cardDescription={ description }
-            cardAttr1={ attr1 }
-            cardAttr2={ attr2 }
-            cardAttr3={ attr3 }
-            cardImage={ image }
-            cardRare={ rarity }
-            cardTrunfo={ trunfo }
-            onInputChange={ this.handleChange }
-            onSaveButtonClick={ this.handleSubmit }
-            isSaveButtonDisabled={ hasError }
-            hasTrunfo={ hasTrunfo }
+            cardName={name}
+            cardDescription={description}
+            cardAttr1={attr1}
+            cardAttr2={attr2}
+            cardAttr3={attr3}
+            cardImage={image}
+            cardRare={rarity}
+            cardTrunfo={trunfo}
+            onInputChange={this.handleChange}
+            onSaveButtonClick={this.handleSubmit}
+            isSaveButtonDisabled={hasError}
+            hasTrunfo={hasTrunfo}
           />
           {this.renderCardList([this.cardConstructor(allStates)], true)}
-          <FilterText name="textFilter" handleFilter={ this.handleChange } />
+          <FilterText name="textFilter" handleFilter={this.handleChange} />
           <FilterSelect
             name="selectFilter"
-            options={ ['todas', 'normal', 'raro', 'muito raro'] }
-            handleFilter={ this.handleChange }
+            options={['todas', 'normal', 'raro', 'muito raro']}
+            handleFilter={this.handleChange}
           />
-          <FilterCheck name="checkFilter" handleFilter={ this.handleChange } />
+          <FilterCheck name="checkFilter" handleFilter={this.handleChange} />
         </article>
 
         <article>
