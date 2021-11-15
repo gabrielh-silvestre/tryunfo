@@ -19,7 +19,7 @@ export default class Form extends Component {
     } = this.props;
 
     return (
-      <form className="border-red-500 border-solid border-2 flex flex-col mx-8 py-4 items-center">
+      <form className="flex flex-col mx-8 py-4 items-center">
         <label className="flex flex-col w-2/3 mb-4" htmlFor="name">
           Nome
           <input
