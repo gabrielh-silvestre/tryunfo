@@ -141,7 +141,7 @@ export default class Form extends Component {
           type="submit"
           disabled={isSaveButtonDisabled}
           onClick={onSaveButtonClick}
-          className="py-2 px-8 bg-purple-700 rounded-3xl disabled:opacity-50"
+          className="py-2 px-8 bg-cerise-1-600 rounded-3xl disabled:opacity-50"
           data-testid="save-button"
         >
           Salvar
