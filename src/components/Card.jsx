@@ -19,8 +19,8 @@ export default class Card extends Component {
     } = this.props;
 
     return (
-      <section className="min-w-min max-w-xs card-container w-8/12 border-10 border-b-16 border-solid border-gray-300 mx-auto z-0">
-        <div className="flex flex-col border-2 border-solid border-black z-10">
+      <section className="min-w-min max-w-xs card-container w-8/12 border-10 border-b-16 border-solid border-gray-300 mx-auto">
+        <div className="flex flex-col border-2 border-solid border-black">
           <div
             className="w-full h-80 bg-center bg-cover"
             style={{
@@ -95,6 +95,7 @@ export default class Card extends Component {
               type="button"
               name={cardName}
               onClick={deleteCard}
+              className="py-1 bg-teal-1-400"
               data-testid="delete-button"
             >
               Excluir
