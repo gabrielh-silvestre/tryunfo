@@ -19,7 +19,7 @@ export default class Form extends Component {
     } = this.props;
 
     return (
-      <form className="flex flex-col mx-8 py-4 items-center">
+      <form className="w-full flex flex-col mx-8 py-4 items-center">
         <label className="flex flex-col w-2/3 mb-4" htmlFor="name">
           Nome
           <input
@@ -28,7 +28,7 @@ export default class Form extends Component {
             id="name"
             value={cardName}
             onChange={onInputChange}
-            className="rounded mt-1"
+            className="rounded mt-1 px-2 py-1 text-black"
             data-testid="name-input"
           />
         </label>
@@ -41,7 +41,7 @@ export default class Form extends Component {
             cols="30"
             value={cardDescription}
             onChange={onInputChange}
-            className="rounded mt-1"
+            className="rounded mt-1 px-2 py-1 text-black"
             data-testid="description-input"
           />
         </label>
@@ -56,7 +56,7 @@ export default class Form extends Component {
             max="90"
             value={cardAttr1}
             onChange={onInputChange}
-            className="rounded mt-1"
+            className="rounded mt-1 px-2 py-1 text-black"
             data-testid="attr1-input"
           />
         </label>
@@ -71,7 +71,7 @@ export default class Form extends Component {
             max="90"
             value={cardAttr2}
             onChange={onInputChange}
-            className="rounded mt-1"
+            className="rounded mt-1 px-2 py-1 text-black"
             data-testid="attr2-input"
           />
         </label>
@@ -86,7 +86,7 @@ export default class Form extends Component {
             max="90"
             value={cardAttr3}
             onChange={onInputChange}
-            className="rounded mt-1"
+            className="rounded mt-1 px-2 py-1 text-black"
             data-testid="attr3-input"
           />
         </label>
@@ -99,7 +99,7 @@ export default class Form extends Component {
             id="image"
             value={cardImage}
             onChange={onInputChange}
-            className="rounded mt-1"
+            className="rounded mt-1 px-2 py-1 text-black"
             data-testid="image-input"
           />
         </label>
@@ -111,7 +111,7 @@ export default class Form extends Component {
             id="rarity"
             value={cardRare}
             onChange={onInputChange}
-            className="rounded mt-1"
+            className="rounded mt-1 px-2 py-1 text-black"
             data-testid="rare-input"
           >
             <option value="normal">normal</option>
@@ -131,7 +131,7 @@ export default class Form extends Component {
               id="trunfo"
               checked={cardTrunfo}
               onChange={onInputChange}
-              className="rounded mt-1"
+              className="rounded mt-1 px-2 py-1 text-black"
               data-testid="trunfo-input"
             />
           </label>
@@ -141,7 +141,7 @@ export default class Form extends Component {
           type="submit"
           disabled={isSaveButtonDisabled}
           onClick={onSaveButtonClick}
-          className="py-2 px-8 bg-purple-700 rounded-3xl"
+          className="py-2 px-8 bg-purple-700 rounded-3xl disabled:opacity-50"
           data-testid="save-button"
         >
           Salvar
