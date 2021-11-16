@@ -13,7 +13,7 @@ const initialForm = {
   attr2: '90',
   attr3: '30',
   image: '',
-  rarity: 'Muito raro',
+  rarity: 'muito raro',
   trunfo: true,
   hasError: true,
   hasTrunfo: false,
