@@ -4,6 +4,7 @@ import FilterCheck from './components/FilterCheck';
 import FilterSelect from './components/FilterSelect';
 import FilterText from './components/FilterText';
 import Form from './components/Form';
+import './App.css';
 
 const initialForm = {
   name: '',
@@ -202,7 +203,7 @@ class App extends React.Component {
     return (
       <main className="bg-gray-800 text-gray-200">
         <h1 className="text-3xl text-center py-4 mb-8">Tryunfo</h1>
-        <article className="grid grid-cols-2">
+        <article className="grid grid-cols-2 content-center justify-items-center">
           <Form
             cardName={name}
             cardDescription={description}
