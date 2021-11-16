@@ -202,7 +202,7 @@ class App extends React.Component {
 
     return (
       <main className="bg-beaver-900 text-gray-200">
-        <h1 className="text-3xl text-center font-bold bg-teal-2-800 py-4 mb-8">Tryunfo</h1>
+        <h1 className="text-3xl text-center font-bold bg-teal-2-400 py-4 mb-8">Tryunfo</h1>
         <article className="grid grid-cols-2 content-center justify-items-center">
           <Form
             cardName={name}
