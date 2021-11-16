@@ -19,8 +19,8 @@ export default class Card extends Component {
     } = this.props;
 
     return (
-      <section className="card-container w-8/12 border-8 border-solid border-gray-400 mx-auto">
-        <div className="flex flex-col border-2 border-solid border-black">
+      <section className="card-container w-8/12 border-10 border-b-16 border-solid border-gray-300 mx-auto z-0">
+        <div className="flex flex-col border-2 border-solid border-black z-10">
           <div
             className="w-full h-80 bg-center bg-cover"
             style={{
