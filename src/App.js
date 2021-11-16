@@ -7,14 +7,14 @@ import Form from './components/Form';
 import './App.css';
 
 const initialForm = {
-  name: '',
-  description: '',
-  attr1: '0',
-  attr2: '0',
-  attr3: '0',
+  name: 'Satoru Goju',
+  description: 'O feiticeiro mais poderoso!',
+  attr1: '90',
+  attr2: '90',
+  attr3: '30',
   image: '',
-  rarity: 'normal',
-  trunfo: false,
+  rarity: 'Muito raro',
+  trunfo: true,
   hasError: true,
   hasTrunfo: false,
   cardList: [],
@@ -202,7 +202,7 @@ class App extends React.Component {
 
     return (
       <main className="bg-beaver-900 text-gray-200">
-        <h1 className="text-3xl text-center py-4 mb-8">Tryunfo</h1>
+        <h1 className="text-3xl text-center font-bold bg-teal-2-800 py-4 mb-8">Tryunfo</h1>
         <article className="grid grid-cols-2 content-center justify-items-center">
           <Form
             cardName={name}
