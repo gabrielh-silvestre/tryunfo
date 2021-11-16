@@ -19,7 +19,7 @@ export default class Card extends Component {
     } = this.props;
 
     return (
-      <section className="card-container w-8/12 border-10 border-b-16 border-solid border-gray-300 mx-auto z-0">
+      <section className="min-w-min max-w-xs card-container w-8/12 border-10 border-b-16 border-solid border-gray-300 mx-auto z-0">
         <div className="flex flex-col border-2 border-solid border-black z-10">
           <div
             className="w-full h-80 bg-center bg-cover"
@@ -44,21 +44,21 @@ export default class Card extends Component {
                 className="w-full mx-2 px-2 py-1 my-2 bg-teal-2-400 text-gray-200 rounded-xl flex justify-between"
                 data-testid="attr1-card"
               >
-                <span>Energia</span>
+                <span className="mr-4">Energia</span>
                 {cardAttr1}
               </li>
               <li
                 className="w-full mx-2 px-2 py-1 my-2 bg-teal-2-400 text-gray-200 rounded-xl flex justify-between"
                 data-testid="attr2-card"
               >
-                <span>Combate</span>
+                <span className="mr-4">Combate</span>
                 {cardAttr2}
               </li>
               <li
                 className="w-full mx-2 px-2 py-1 my-2 bg-teal-2-400 text-gray-200 rounded-xl flex justify-between"
                 data-testid="attr3-card"
               >
-                <span>Pacto</span>
+                <span className="mr-4">Pacto</span>
                 {cardAttr3}
               </li>
             </ul>
