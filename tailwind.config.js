@@ -2,6 +2,15 @@ module.exports = {
   purge: ['./src/**/*.{js,jsx,ts,tsx}', './public/index.html'],
   darkMode: false, // or 'media' or 'class'
   theme: {
+    borderWidth: {
+      DEFAULT: '1px',
+      '0': '0',
+      '2': '2px',
+      '4': '4px',
+      '8': '8px',
+      '10': '10px',
+      '16': '16px',
+    },
     fontFamily: {
       'jujutsu': ['Cormorant Garamond', 'serif'],
     },
