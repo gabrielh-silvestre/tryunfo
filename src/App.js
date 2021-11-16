@@ -228,7 +228,7 @@ class App extends React.Component {
           <FilterCheck name="checkFilter" handleFilter={this.handleChange} />
         </article>
 
-        <article>
+        <article className="grid grid-cols-3">
           {!textFilter && selectFilter === 'todas' && !checkFilter
             ? this.renderCardList(cardList, false)
             : this.renderFiltered()}
