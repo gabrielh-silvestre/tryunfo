@@ -12,10 +12,11 @@ const initialForm = {
   attr1: '90',
   attr2: '90',
   attr3: '30',
-  image: '',
+  image:
+    'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2F64.media.tumblr.com%2F888c345a4ce6c25e33fdee744c7a8fe6%2F09d03ac297c9dde3-a7%2Fs2048x3072%2F263ab96038a8c8950acde306311395a157b87b19.jpg&f=1&nofb=1',
   rarity: 'muito raro',
   trunfo: true,
-  hasError: true,
+  hasError: false,
   hasTrunfo: false,
   cardList: [],
   textFilter: undefined,
@@ -125,6 +126,7 @@ class App extends React.Component {
       attr3: '0',
       image: '',
       rarity: 'normal',
+      hasError: true,
     });
   };
 
@@ -202,7 +204,9 @@ class App extends React.Component {
 
     return (
       <main className="bg-beaver-900 text-gray-200">
-        <h1 className="text-3xl text-center font-bold bg-teal-2-400 py-4 mb-8">Tryunfo</h1>
+        <h1 className="text-3xl text-center font-bold bg-teal-2-400 py-4 mb-8">
+          Tryunfo
+        </h1>
         <article className="grid grid-cols-2 content-center justify-items-center">
           <Form
             cardName={name}
@@ -219,13 +223,15 @@ class App extends React.Component {
             hasTrunfo={hasTrunfo}
           />
           {this.renderCardList([this.cardConstructor(allStates)], true)}
-          <FilterText name="textFilter" handleFilter={this.handleChange} />
-          <FilterSelect
-            name="selectFilter"
-            options={['todas', 'normal', 'raro', 'muito raro']}
-            handleFilter={this.handleChange}
-          />
-          <FilterCheck name="checkFilter" handleFilter={this.handleChange} />
+          <section className="flex w-full justify-around col-span-full">
+            <FilterText name="textFilter" handleFilter={this.handleChange} />
+            <FilterSelect
+              name="selectFilter"
+              options={['todas', 'normal', 'raro', 'muito raro']}
+              handleFilter={this.handleChange}
+            />
+            <FilterCheck name="checkFilter" handleFilter={this.handleChange} />
+          </section>
         </article>
 
         <article className="grid grid-cols-3">
