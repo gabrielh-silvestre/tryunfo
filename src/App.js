@@ -234,7 +234,7 @@ class App extends React.Component {
           </section>
         </article>
 
-        <article className="grid grid-cols-3">
+        <article className="grid grid-cols-3 mt-16">
           {!textFilter && selectFilter === 'todas' && !checkFilter
             ? this.renderCardList(cardList, false)
             : this.renderFiltered()}
