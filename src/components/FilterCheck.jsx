@@ -6,12 +6,13 @@ export default class FilterCheck extends Component {
     const { name, handleFilter } = this.props;
 
     return (
-      <label htmlFor={ name }>
+      <label htmlFor={ name } className="flex text-xl items-center">
         Super Trunfo
         <input
           type="checkbox"
           name={ name }
           id={ name }
+          className="rounded mt-1 px-2 py-1 text-black text-lg"
           onChange={ handleFilter }
           data-testid="trunfo-filter"
         />

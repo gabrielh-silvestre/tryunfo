@@ -6,11 +6,12 @@ export default class FilterSelect extends Component {
     const { name, options, handleFilter } = this.props;
 
     return (
-      <label htmlFor={ name }>
+      <label htmlFor={ name } className="flex flex-col text-xl">
         Pesquisa por raridade:
         <select
           name={ name }
           id={ name }
+          className="rounded mt-1 px-2 py-1 text-black text-lg"
           onChange={ handleFilter }
           data-testid="rare-filter"
         >
