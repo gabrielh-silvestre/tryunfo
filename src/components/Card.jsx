@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
-const DEFAULT_IMG =
-  'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2F64.media.tumblr.com%2F888c345a4ce6c25e33fdee744c7a8fe6%2F09d03ac297c9dde3-a7%2Fs2048x3072%2F263ab96038a8c8950acde306311395a157b87b19.jpg&f=1&nofb=1';
 export default class Card extends Component {
   render() {
     const {
@@ -24,9 +22,7 @@ export default class Card extends Component {
           <div
             className="w-full h-80 bg-center bg-cover"
             style={{
-              backgroundImage: `url(${
-                cardImage === '' ? DEFAULT_IMG : cardImage
-              })`,
+              backgroundImage: `url(${cardImage})`,
             }}
             data-testid="image-card"
           />
